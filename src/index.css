@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-Outfit bg-[#10141E];
+    }
+
+    h1 {
+        @apply text-white text-[2rem] font-light tracking-[-0.03125rem];
+    }
+}
+
+@layer components {
+    .loginInput {
+        @apply w-full pl-4 pb-[1.12rem] bg-[#161D2F] border-b-2 border-[#5A698F] outline-none text-white focus:text-white focus:border-white;
+    }
+
+    .loginButton {
+        @apply mb-6 w-full text-white bg-[#FC4747] h-12;
+    }
+}
