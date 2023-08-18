@@ -10,7 +10,7 @@ export default function SearchBar({ placeholder }) {
                     className="z-10"
                 />
                 <input
-                    className="w-full bg-[#10141E] focus:border-b-[1px] outline-none text-white focus:text-white focus:border-[#5A698F] focus:pb-[0.94rem] caret-[#FC4747] placeholder:opacity-[0.4979]"
+                    className="w-full bg-transparent focus:border-b-[1px] outline-none text-white focus:text-white focus:border-[#5A698F] caret-[#FC4747] placeholder:opacity-[0.4979]"
                     type="text"
                     placeholder={placeholder}
                 />
