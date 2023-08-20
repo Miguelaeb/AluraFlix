@@ -19,7 +19,7 @@ export default function Movies() {
         <>
             <SearchBar placeholder="Search for movies" />
             <section className="sectionContainers">
-                <h2 className="sectionTitle">Top Rated Movies</h2>
+                <h2 className="sectionTitle">Movies</h2>
 
                 <div className="w-full grid grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {topRatedMovies.map((item) => (
