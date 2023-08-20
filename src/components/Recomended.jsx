@@ -1,30 +1,29 @@
 import useTMDbApi from "../../api/api";
 
 export default function Recomended() {
-    const { movies, loading } = useTMDbApi();
+    const { content, loading } = useTMDbApi();
 
     if (loading) {
         return (
-            <div className=" text-white mx-4 md:mx-[1.58rem]">Loading...</div>
+            <div className="text-white mx-4 md:mx-[1.58rem]">Loading...</div>
         );
     }
 
     return (
-        <section className=" mx-4 md:mx-[1.58rem]">
-            <h2 className=" sectionTitle">Recomended for you</h2>
+        <section className="mx-4 md:mx-[1.58rem]">
+            <h2 className="sectionTitle">Recommended for you</h2>
 
             <div className="w-full grid grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {movies.map((movie) => (
-                    <div key={movie.id} className="movie">
+                {content.map((item) => (
+                    <div key={item.id}>
                         <img
-                            className="rounded-xl mb-4"
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title}
+                            className="rounded-xl mb-2"
+                            src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                            alt={item.title || item.name}
                         />
-                        <p className=" text-white text-sm font-medium">
-                            {movie.title}
+                        <p className="text-white text-sm font-medium mb-4">
+                            {item.title || item.name}
                         </p>
-                        {/* <p>{movie.overview}</p> */}
                     </div>
                 ))}
             </div>
