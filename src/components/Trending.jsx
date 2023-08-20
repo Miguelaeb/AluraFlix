@@ -2,8 +2,8 @@
 
 export default function Trending() {
     return (
-        <section className=" marginRight ml-4">
-            <h2 className=" text-white text-xl mr-4">Trending</h2>
+        <section className=" sectionContainers">
+            <h2 className=" sectionTitle">Trending</h2>
         </section>
     );
 }

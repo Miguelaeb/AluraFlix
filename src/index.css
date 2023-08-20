@@ -22,4 +22,12 @@
     .loginButton {
         @apply mb-6 w-full text-white bg-[#FC4747] h-12;
     }
+
+    .sectionContainers {
+        @apply ml-4 md:ml-[1.58rem];
+    }
+
+    .sectionTitle {
+        @apply text-white text-xl mr-4;
+    }
 }
