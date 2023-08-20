@@ -1,7 +1,7 @@
 import useTMDbApi from "../../api/api";
 
 export default function Trending() {
-    const { content, loading } = useTMDbApi();
+    const { trendingContent, loading } = useTMDbApi();
 
     if (loading) {
         return (
@@ -15,7 +15,7 @@ export default function Trending() {
 
             <div className="scroll overflow-x-auto overflow-y-hidden mt-4 hide-scrollbar">
                 <div className="grid grid-flow-col gap-10">
-                    {content.map((item) => (
+                    {trendingContent.map((item) => (
                         <div className="w-[15rem] h-full" key={item.id}>
                             <img
                                 className=" w-full rounded-xl"

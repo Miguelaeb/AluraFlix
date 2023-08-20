@@ -24,7 +24,7 @@
     }
 
     .sectionContainers {
-        @apply ml-4 md:ml-[1.58rem];
+        @apply mx-4 md:mx-[1.58rem];
     }
 
     .sectionTitle {
