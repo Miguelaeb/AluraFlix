@@ -1,11 +1,11 @@
 import SearchBar from "../components/SearchBar ";
 
-export default function Movies() {
+export default function TVSeries() {
     return (
         <>
-            <SearchBar placeholder="Search for movies" />
+            <SearchBar placeholder="Search for TV series" />
             <section className=" sectionContainers">
-                <h2 className="sectionTitle">Movies</h2>
+                <h2 className="sectionTitle">TV Series</h2>
 
                 <div></div>
             </section>

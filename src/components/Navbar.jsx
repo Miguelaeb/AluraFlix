@@ -50,7 +50,7 @@ export default function Navbar() {
                         </li>
                         <li>
                             <NavLink
-                                to="/tv"
+                                to="/tvseries"
                                 className={({ isActive }) =>
                                     isActive ? "active" : ""
                                 }>
