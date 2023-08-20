@@ -1,7 +1,13 @@
 import useTMDbApi from "../../api/api";
 
 export default function Trending() {
-    const { content } = useTMDbApi();
+    const { content, loading } = useTMDbApi();
+
+    if (loading) {
+        return (
+            <div className="text-white mx-4 md:mx-[1.58rem]">Loading...</div>
+        );
+    }
 
     return (
         <section className="ml-4 md:ml-[1.58rem] mb-[2.44rem]">
