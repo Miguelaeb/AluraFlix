@@ -15,7 +15,7 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/">
+                        <Link to="/movies">
                             <img src="/images/Movieicon.svg" alt="Movie" />
                         </Link>
                     </li>
