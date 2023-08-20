@@ -31,3 +31,14 @@
         @apply text-white text-xl mr-4;
     }
 }
+
+.hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    overflow: -moz-scrollbars-none; /* Firefox */
+}
+
+/* Para Webkit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}

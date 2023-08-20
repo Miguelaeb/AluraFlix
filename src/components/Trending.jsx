@@ -7,7 +7,7 @@ export default function Trending() {
         <section className="ml-4 md:ml-[1.58rem] mb-[2.44rem]">
             <h2 className="sectionTitle">Trending</h2>
 
-            <div className="scroll overflow-x-auto overflow-y-hidden mt-4">
+            <div className="scroll overflow-x-auto overflow-y-hidden mt-4 hide-scrollbar">
                 <div className="grid grid-flow-col gap-10">
                     {content.map((item) => (
                         <div className="w-[15rem] h-full" key={item.id}>
