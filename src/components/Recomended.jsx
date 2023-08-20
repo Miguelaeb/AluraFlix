@@ -4,7 +4,9 @@ export default function Recomended() {
     const { movies, loading } = useTMDbApi();
 
     if (loading) {
-        return <div className=" text-white">Loading...</div>;
+        return (
+            <div className=" text-white mx-4 md:mx-[1.58rem]">Loading...</div>
+        );
     }
 
     return (
