@@ -1,6 +1,6 @@
 import useTMDbApi from "../../api/api";
 
-export default function Recomended() {
+export default function Recommended() {
     const { topRatedContent, loading } = useTMDbApi();
 
     if (loading) {
