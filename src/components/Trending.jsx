@@ -1,4 +1,5 @@
 import useTMDbApi from "../../api/api";
+import BookmarkButton from "./BookmarkButton";
 
 export default function Trending() {
     const { trendingContent, loading } = useTMDbApi();
@@ -16,12 +17,15 @@ export default function Trending() {
             <div className="scroll overflow-x-auto overflow-y-hidden mt-4 hide-scrollbar">
                 <div className="grid grid-flow-col gap-10">
                     {trendingContent.map((item) => (
-                        <div className="w-[15rem] h-full" key={item.id}>
+                        <div
+                            className=" relative w-[15rem] h-full"
+                            key={item.id}>
                             <img
                                 className=" w-full rounded-xl"
                                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                                 alt={item.title || item.name}
                             />
+                            <BookmarkButton />
                         </div>
                     ))}
                 </div>
