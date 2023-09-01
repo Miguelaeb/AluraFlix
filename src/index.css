@@ -44,5 +44,14 @@
 }
 
 .active svg path {
-    fill: white;
+    fill: #fff;
+}
+
+.bookmarkButton:hover path {
+    stroke: #000;
+}
+
+.bookmarkButton:hover circle {
+    fill: #fff;
+    opacity: 1;
 }
