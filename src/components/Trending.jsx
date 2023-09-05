@@ -1,7 +1,9 @@
+import PropTypes from "prop-types"; // Import PropTypes
 import useTMDbApi from "../../api/api";
 import BookmarkButton from "./BookmarkButton";
+import BookmarkedButton from "./BookmarkedButton";
 
-export default function Trending() {
+export default function Trending({ toggleBookmark, isActive }) {
     const { trendingContent, loading } = useTMDbApi();
 
     if (loading) {
@@ -25,7 +27,14 @@ export default function Trending() {
                                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                                 alt={item.title || item.name}
                             />
-                            <BookmarkButton />
+
+                            <button onClick={() => toggleBookmark(item.id)}>
+                                {isActive[item.id] ? (
+                                    <BookmarkedButton />
+                                ) : (
+                                    <BookmarkButton />
+                                )}
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -33,3 +42,9 @@ export default function Trending() {
         </section>
     );
 }
+
+// Add prop validations using PropTypes
+Trending.propTypes = {
+    toggleBookmark: PropTypes.func.isRequired, // Expecting a function prop
+    isActive: PropTypes.object.isRequired, // Expecting an object prop
+};

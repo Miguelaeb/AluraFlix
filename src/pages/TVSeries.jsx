@@ -1,8 +1,10 @@
+import PropTypes from "prop-types"; // Import PropTypes
 import useTMDbApi from "../../api/api";
 import SearchBar from "../components/SearchBar ";
 import BookmarkButton from "../components/BookmarkButton";
+import BookmarkedButton from "../components/BookmarkedButton";
 
-export default function TVSeries() {
+export default function TVSeries({ toggleBookmark, isActive }) {
     const { topRatedContent, loading } = useTMDbApi();
 
     if (loading) {
@@ -30,7 +32,13 @@ export default function TVSeries() {
                                 src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                                 alt={item.original_name || item.name}
                             />
-                            <BookmarkButton />
+                            <button onClick={() => toggleBookmark(item.id)}>
+                                {isActive[item.id] ? (
+                                    <BookmarkedButton />
+                                ) : (
+                                    <BookmarkButton />
+                                )}
+                            </button>
                             <div>
                                 <p className="text-white opacity-75">
                                     {item.first_air_date.slice(0, 4)}
@@ -46,3 +54,9 @@ export default function TVSeries() {
         </>
     );
 }
+
+// Add prop validations using PropTypes
+TVSeries.propTypes = {
+    toggleBookmark: PropTypes.func.isRequired, // Expecting a function prop
+    isActive: PropTypes.object.isRequired, // Expecting an object prop
+};
