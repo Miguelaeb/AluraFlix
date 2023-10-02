@@ -55,3 +55,20 @@
     fill: #fff;
     opacity: 1;
 }
+
+/* Agrega esta regla CSS en tu archivo de estilos de Tailwind */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(
+            -100%
+        ); /* Puedes ajustar la velocidad ajustando este valor */
+    }
+}
+
+/* Aplica la animación a la clase animate-marquee */
+.animate-marquee {
+    animation: marquee 20s linear infinite; /* Ajusta la duración y el timing de la animación según tus necesidades */
+}
