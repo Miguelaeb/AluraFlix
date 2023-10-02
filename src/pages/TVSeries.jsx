@@ -24,7 +24,7 @@ export default function TVSeries({ toggleBookmark, isActive }) {
             <section className="sectionContainers">
                 <h2 className="sectionTitle">TV Series</h2>
 
-                <div className="w-full grid grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="w-full grid grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-8 gap-4">
                     {topRatedTVSeries.map((item) => (
                         <div className=" relative" key={item.id}>
                             <img
