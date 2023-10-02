@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export default function SearchBar({ placeholder }) {
     return (
-        <section className=" my-[1.63rem] mx-4 h-[30px] md:mx-[1.58rem] mt-24">
+        <section className=" my-[1.63rem] mx-4 h-[30px] mt-24 md:mx-[1.58rem] md:mt-28 xl:mt-[4rem]">
             <div className=" flex gap-4">
                 <img
                     src="/images/Searchicon.svg"

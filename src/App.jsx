@@ -20,28 +20,31 @@ export default function App() {
         <>
             <Router>
                 <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route
-                        path="/movies"
-                        element={
-                            <Movies
-                                toggleBookmark={toggleBookmark}
-                                isActive={isActive}
-                            />
-                        }
-                    />
-                    <Route
-                        path="/tvseries"
-                        element={
-                            <TVSeries
-                                toggleBookmark={toggleBookmark}
-                                isActive={isActive}
-                            />
-                        }
-                    />
-                    <Route path="/bookmark" element={<Bookmark />} />
-                </Routes>
+
+                <div className=" xl:ml-[120px]">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                            path="/movies"
+                            element={
+                                <Movies
+                                    toggleBookmark={toggleBookmark}
+                                    isActive={isActive}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/tvseries"
+                            element={
+                                <TVSeries
+                                    toggleBookmark={toggleBookmark}
+                                    isActive={isActive}
+                                />
+                            }
+                        />
+                        <Route path="/bookmark" element={<Bookmark />} />
+                    </Routes>
+                </div>
             </Router>
         </>
     );
