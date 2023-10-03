@@ -16,8 +16,8 @@ export default function Trending({ toggleBookmark, isActive }) {
         <section className="ml-4 md:ml-[1.58rem] mb-[2.44rem]">
             <h2 className="sectionTitle">Trending</h2>
 
-            <div className="scroll-container overflow-x-auto overflow-y-hidden mt-4 hide-scrollbar">
-                <div className="grid grid-flow-col gap-10 whitespace-nowrap animate-marquee">
+            <div className="overflow-x-auto overflow-y-hidden mt-4 hide-scrollbar">
+                <div className="grid grid-flow-col gap-10 animate-infinite-scroll">
                     {trendingContent.map((item) => (
                         <div
                             className=" relative w-[15rem] h-full"
